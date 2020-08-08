@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Quicksand&display=swap");
+html {
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  background-color: #cccace;
+  font-size: 2rem;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+#main {
+  margin: 0 auto;
+}
+
+#title {
+  font-family: Oswald, sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 10px 0;
+  margin-top: 2vmax;
+}
+
+#img-div {
+  width: 100vmax;
+  background-color: #d9d8da;
+  margin: 10px auto 15px auto;
+  padding: 3%;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#img-caption {
+  font-size: 1.4rem;
+}
+
+strong {
+  font-weight: 800;
+  color: #6b1f7a;
+}
+
+ul {
+  text-align: left;
+  max-width: 50vw;
+  margin: 10px auto 50px auto;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  #title {
+    font-size: 3.5rem;
+  }
+  ul {
+    line-height: 1.2;
+  }
+  #main {
+    margin: 0;
+  }
+  #image {
+    max-width: 366px;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
