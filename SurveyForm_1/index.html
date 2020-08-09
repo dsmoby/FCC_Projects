@@ -1,0 +1,135 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mainstyles.css" />
+    <title>Programming Language Survey</title>
+  </head>
+  <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+    <div id="container" class="container-fluid bg-color2">
+      <header id="header" class="bg-color1">
+        <h1 id="title" class="title text-color1">
+          Programmer / Developer's Survey
+        </h1>
+        <p id="description" class="text-color3">
+          To collect data about different tools and technologies being used by developers and provide a statistical analysis to the community
+        </p>
+      </header>
+      <main id="form-cont" class="text-color2">
+        <form action="#" id="survey-form" class="form" netlify>
+          <fieldset id="">
+            <legend>Basic Info</legend>
+
+            <div class="form-group">
+              <label for="name" id="name-label">name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name here" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email" id="email-label">email</label>
+              <input type="email" id="email" name="email" placeholder="enter a valid email address" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="number" id="number-label">Age</label>
+              <input type="number" id="number" min="5" max="120" name="number" placeholder="enter a number between 5 and 120" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <p id="select-label">What is your current situation?</p>
+              <select name="role" id="dropdown">
+                <option disabled selected value>Select one of the options</option>
+                <option value="student">Student</option>
+                <option value="jobless">Unemployed</option>
+                <option value="job">Full time job</option>
+                <option value="partialjob">Partial time job</option>
+                <option value="freelancer">Freelancer</option>
+                <option value="other">other</option>
+                <option value="pefernotsay">Prefer not to say</option>
+              </select>
+            </div>
+            <!--- Radio buttons ---->
+
+            <fieldset class="form-group">
+              <legend>Gender</legend>
+              <div class="radio-group">
+                <input id="male" name="gender" value="male" type="radio" class="radio-control" />
+                <label id="" for="male">male</label>
+              </div>
+              <div class="radio-group">
+                <input id="female" name="gender" value="female" type="radio" class="radio-control" />
+                <label id="" for="female">female</label>
+              </div>
+              <div class="radio-group">
+                <input id="other" name="gender" value="other" type="radio" class="radio-control" />
+                <label id="" for="other">other</label>
+              </div>
+            </fieldset>
+
+            <!-- checkboxes -->
+
+            <fieldset id="check-cont" class="form-group">
+              <legend id="">Select the programming languages you have been ysing</legend>
+
+              <div class="check-group">
+                <input type="checkbox" id="cpp" class="checkbox-control" name="proglang" value="cpp" />
+                <label for="cpp" id="">C++</label>
+              </div>
+              <div class="check-group">
+                <input type="checkbox" id="java" class="checkbox-control" name="proglang" value="java" />
+                <label for="java" id="">java</label>
+              </div>
+              <div class="check-group">
+                <input type="checkbox" id="javascript" class="checkbox-control" name="proglang" value="javascript" />
+                <label for="javascript" id="">javascript</label>
+              </div>
+              <div class="check-group">
+                <input type="checkbox" id="python" class="checkbox-control" name="proglang" value="python" />
+                <label for="python" id="">python</label>
+              </div>
+              <div class="check-group">
+                <input type="checkbox" id="erlang" class="checkbox-control" name="proglang" value="erlang" />
+                <label for="erlang" id="">erlang</label>
+              </div>
+              <div class="check-group">
+                <input type="checkbox" id="haskel" class="checkbox-control" name="proglang" value="haskel" />
+                <label for="haskel" id="">haskel</label>
+              </div>
+              <div class="check-group">
+                <input type="checkbox" id="clojure" class="checkbox-control" name="proglang" value="clojure" />
+                <label for="clojure" id="">clojure</label>
+              </div>
+              <div class="check-group">
+                <input type="checkbox" id="go" class="checkbox-control" name="proglang" value="go" />
+                <label for="go" id="">go</label>
+              </div>
+              <div class="check-group form-group">
+                <input type="checkbox" id="kotlin" class="checkbox-control" name="proglang" value="kotlin" />
+                <label for="kotlin" id="">kotlin</label>
+              </div>
+            </fieldset>
+
+            
+            <!-- Text Area for comments -->
+            <div class="form-group"><label for="comments">Any additional comments?</label><textarea name="comments" id="comments" class="form-control" cols="90" rows="10"></textarea></div>
+          </fieldset>
+
+          <!-- Submit button -->
+          <div class="form-group">
+            <button id="submit" class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
