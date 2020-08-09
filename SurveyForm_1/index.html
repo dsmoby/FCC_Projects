@@ -16,7 +16,7 @@
         </p>
       </header>
       <main id="form-cont" class="text-color2">
-        <form id="survey-form" name="survey" method="POST" class="form" data-netlify="true">
+        <form id="survey-form" name="survey" method="POST" class="form" data-netlify-recaptcha="true" data-netlify="true">
           <fieldset id="">
             <legend>Basic Info</legend>
 
@@ -111,6 +111,9 @@
             <!-- Text Area for comments -->
             <div class="form-group"><label for="comments">Any additional comments?</label><textarea name="comments" id="comments" class="form-control" cols="90" rows="10"></textarea></div>
           </fieldset>
+
+          <!-- reCaptcha -->
+          <div class="form-group" data-netlify-recaptcha="true"></div>
 
           <!-- Submit button -->
           <div class="form-group">
