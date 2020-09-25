@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Quicksand&display=swap");
 
-html {
-  font-size: 13px;
-}
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+}
+:root {
+  --image-load-time: 700ms;
 }
 
 body {
@@ -48,10 +51,17 @@ body {
   margin: 0 auto;
   display: block;
   margin-bottom: 20px;
+  animation: image-load var(--image-load-time) ease-out forwards;
+  transform: translateX(-100%);
 }
 
 #img-caption {
   font-size: 1.4rem;
+  animation: image-caption-load calc(var(--image-load-time) - 200ms) ease-in
+    forwards;
+  animation-delay: var(--image-load-time);
+  opacity: 0;
+  z-index: -3;
 }
 
 strong {
@@ -71,6 +81,7 @@ li {
   margin-bottom: 20px;
   transition: all 350ms ease-in-out;
   padding: 5px 15px;
+  
 
   &:hover > strong {
     color: orange;
@@ -97,5 +108,37 @@ li {
   #image {
     max-width: 366px;
     height: auto;
+  }
+}
+@keyframes image-load {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  90% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes image-caption-load {
+  0% {
+    opacity: 0;
+    // transform: translateX(-100%);
+    z-index: -3;
+  }
+
+  90% {
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 1;
   }
 }

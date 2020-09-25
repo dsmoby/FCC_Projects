@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Quicksand&display=swap");
-html {
-  font-size: 13px;
-}
-
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+}
+
+:root {
+  --image-load-time: 700ms;
 }
 
 body {
@@ -48,10 +52,20 @@ body {
   margin: 0 auto;
   display: block;
   margin-bottom: 20px;
+  -webkit-animation: image-load var(--image-load-time) ease-out forwards;
+          animation: image-load var(--image-load-time) ease-out forwards;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 #img-caption {
   font-size: 1.4rem;
+  -webkit-animation: image-caption-load calc(var(--image-load-time) - 200ms) ease-in forwards;
+          animation: image-caption-load calc(var(--image-load-time) - 200ms) ease-in forwards;
+  -webkit-animation-delay: var(--image-load-time);
+          animation-delay: var(--image-load-time);
+  opacity: 0;
+  z-index: -3;
 }
 
 strong {
@@ -97,6 +111,72 @@ li:hover {
   #image {
     max-width: 366px;
     height: auto;
+  }
+}
+
+@-webkit-keyframes image-load {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  90% {
+    opacity: 0.5;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes image-load {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  90% {
+    opacity: 0.5;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes image-caption-load {
+  0% {
+    opacity: 0;
+    z-index: -3;
+  }
+  90% {
+    opacity: 0.5;
+    z-index: 1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes image-caption-load {
+  0% {
+    opacity: 0;
+    z-index: -3;
+  }
+  90% {
+    opacity: 0.5;
+    z-index: 1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=styles.css.map */
