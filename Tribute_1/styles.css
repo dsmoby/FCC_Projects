@@ -67,6 +67,14 @@ ul {
 
 li {
   margin-bottom: 20px;
+  -webkit-transition: all 350ms linear;
+  transition: all 350ms linear;
+  padding: 5px 15px;
+}
+
+li:hover {
+  background-color: #66a;
+  color: #efefef;
 }
 
 @media (max-width: 480px) {

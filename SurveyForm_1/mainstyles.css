@@ -2,8 +2,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -101,18 +100,13 @@ body #container #header #description {
 
 .box-cont {
   border: 5px solid maroon;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   height: 100%;
   background-color: dimgrey;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1f 1fr;
-      grid-template-rows: 1f 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1f 1fr;
   grid-gap: 10px;
 }
 
@@ -137,8 +131,6 @@ fieldset {
 
 label,
 #select-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
@@ -167,12 +159,8 @@ label,
 
 .radio-group,
 .check-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space;
-      -ms-flex-pack: space;
-          justify-content: space;
+  justify-content: space;
   margin: 0.5rem 0.7rem;
 }
 
@@ -191,8 +179,6 @@ label {
 
 #comments {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 300px;
   background-color: #e0e0e0;
@@ -211,7 +197,6 @@ label {
   border-radius: 5px;
   outline: none;
   border: none;
-  -webkit-transition: all 250ms ease-in;
   transition: all 250ms ease-in;
 }
 
