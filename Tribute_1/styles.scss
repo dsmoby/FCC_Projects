@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Quicksand&display=swap");
 
 html {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 * {
@@ -11,7 +11,8 @@ html {
 }
 
 body {
-  width: 100%;
+  width: 100vw;
+  height: 200vh;
   margin: 0 auto;
   text-align: center;
   font-family: "Quicksand", sans-serif;
@@ -56,6 +57,7 @@ body {
 strong {
   font-weight: 800;
   color: hsl(290, 60%, 30%);
+  transition: all 350ms ease-in-out;
 }
 
 ul {
@@ -70,9 +72,12 @@ li {
   transition: all 350ms ease-in-out;
   padding: 5px 15px;
 
+  &:hover > strong {
+    color: orange;
+  }
   &:hover {
-    background-color: #66a;
-    color: #efefef;
+    background-color: #607070;
+    color: #e5e1e1;
   }
 }
 
